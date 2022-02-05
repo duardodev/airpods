@@ -13,7 +13,7 @@
 body {
   background: var(--primary-color);
   color: var(--second-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -22,6 +22,7 @@ header {
   top: 0;
   left: 0;
   z-index: 100;
+  background: var(--primary-color);
 }
 
 .container {
@@ -93,11 +94,11 @@ header {
 .description-container .title {
   font-size: 8rem;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .description-container .paragraph {
-  padding: 0 3rem 0 0;
+  padding: 0 5rem 0 0;
 }
 
 .description-img {
@@ -119,10 +120,46 @@ header {
 
 .scroll-text {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
 .scroll-icon {
   width: 32px;
+}
+
+.specifications-section {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-content: center;
+  justify-content: center;
+  column-gap: 4rem;
+}
+
+.details-box {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.details-initial {
+  font-size: 0.938rem;
+}
+
+.details-title {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+.details-title span {
+  font-size: 2.5rem;
+}
+
+.details-img {
+  width: max-content;
+  align-self: center;
+}
+
+.details-img img {
+  width: 300px;
 }
