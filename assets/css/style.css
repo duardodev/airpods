@@ -5,14 +5,18 @@
 }
 
 :root {
-  --primary-color: #fff;
-  --second-color: #101014;
-  --button-color: #6dca9b;
+  --white-color: #fff;
+  --first-color: #101014;
+  --second-color: #9e91f9;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--primary-color);
-  color: var(--second-color);
+  background: var(--white-color);
+  color: var(--first-color);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -22,7 +26,7 @@ header {
   top: 0;
   left: 0;
   z-index: 100;
-  background: var(--primary-color);
+  background: var(--white-color);
 }
 
 .container {
@@ -37,11 +41,11 @@ header {
   align-items: center;
 }
 
-.nav-container .logo {
+.nav-logo {
   font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
-  color: var(--second-color-color);
+  color: var(--first-color);
 }
 
 .nav-menu {
@@ -59,12 +63,17 @@ header {
 
 .nav-menu ul li a {
   text-decoration: none;
+  color: var(--first-color);
+  transition: 0.3s;
+}
+
+.nav-menu ul li a:hover {
   color: var(--second-color);
 }
 
 .nav-button {
-  background: var(--button-color);
-  color: var(--primary-color);
+  background: var(--second-color);
+  color: var(--white-color);
   font-size: 1rem;
   font-weight: 500;
   padding: 0.375rem 1rem;
@@ -91,13 +100,13 @@ header {
   text-align: initial;
 }
 
-.description-container .title {
+.description-title {
   font-size: 8rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
-.description-container .paragraph {
+.description-paragraph {
   padding: 0 5rem 0 0;
 }
 
@@ -112,7 +121,7 @@ header {
   margin-right: 1rem;
 }
 
-.scroll {
+.scroll-container {
   grid-area: scroll;
   text-align: center;
   align-self: center;
@@ -162,4 +171,35 @@ header {
 
 .details-img img {
   width: 300px;
+}
+
+/* ANIMATION */
+.airpod1 {
+  animation: airpod1 3s infinite;
+}
+
+@keyframes airpod1 {
+  50% {
+    transform: translateY(-5%);
+  }
+}
+
+.airpod2 {
+  animation: airpod2 3s infinite;
+}
+
+@keyframes airpod2 {
+  50% {
+    transform: translateY(5%);
+  }
+}
+
+.airpods {
+  animation: airpods 3s infinite;
+}
+
+@keyframes airpods {
+  50% {
+    transform: translateY(5%);
+  }
 }
