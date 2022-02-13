@@ -14,23 +14,27 @@
   </head>
   <body>
     <header>
-      <nav class="nav-container container">
+      <nav class="nav-container container" id="nav">
         <a href="#" class="nav-logo">AirPods</a>
 
         <div class="nav-menu">
           <ul>
-            <li class="nav-item"><a href="#">Descrição</a></li>
-            <li class="nav-item">
-              <a href="#specifications">Especificações</a>
-            </li>
+            <li class="nav-item"><a href="#description">Descrição</a></li>
+            <li class="nav-item"><a href="#specifications">Especificações</a></li>
           </ul>
+        </div>
+
+        <div class="nav-actions">
+          <div class="nav-toggle" id="toggle">
+            <img src="assets/icons/icon-arrow.svg" alt="" />
+          </div>
 
           <input type="submit" class="nav-button" value="Comprar" />
         </div>
       </nav>
     </header>
     <main class="container">
-      <section class="description-section">
+      <section class="description-section" id="description">
         <div class="description-container">
           <h1 class="description-title">AirPods</h1>
           <p class="description-paragraph">
