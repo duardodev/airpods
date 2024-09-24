@@ -28,13 +28,10 @@ function scrollSmooth(link) {
 /* ANIMATE GSAP */
 gsap.from('.nav-logo', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
 gsap.from('.nav-item, .nav-toggle, .nav-button', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
-gsap.from('.description-title', { opacity: 0, duration: 1, delay: 0.8, y: 50 });
-gsap.from('.description-paragraph', { opacity: 0, duration: 1, delay: 0.8, y: 50 });
-gsap.from('.headphones', { opacity: 0, duration: 2, delay: 1, y: -40 });
+gsap.from('.description-title', { opacity: 0, duration: 1, delay: 0.5, y: 50 });
+gsap.from('.description-paragraph', { opacity: 0, duration: 1, delay: 0.5, y: 50 });
+gsap.from('.headphones', { opacity: 0, duration: 1, delay: 0.5, y: -40 });
 gsap.from('.scroll-container', { opacity: 0, duration: 1, delay: 0.5, y: -25 });
-// gsap.from('.specification-title', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
-// // gsap.from('.details-box', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
-// gsap.from('.secondary-specifications-box', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
 
 /* ANIMATE SCROLLMAGIC */
 const animate = new TimelineMax({ onUpdate: updatePercentage });
