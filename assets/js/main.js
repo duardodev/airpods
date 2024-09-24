@@ -1,52 +1,67 @@
 /* SHOW MENU MOBILE */
-const toggleBtn = document.getElementById('toggle')
-const navElement = document.getElementById('nav')
+const toggleBtn = document.getElementById('toggle');
+const navElement = document.getElementById('nav');
 
 toggleBtn.addEventListener('click', function () {
-  navElement.classList.toggle('show')
-})
+  navElement.classList.toggle('show');
+});
 
 /* HIDE MENU MOBILE */
-const links = document.querySelectorAll('nav ul li a')
+const links = document.querySelectorAll('nav ul li a');
 
 for (const link of links) {
   link.addEventListener('click', function (event) {
-    event.preventDefault()
-    navElement.classList.remove('show')
-    scrollSmooth(link)
-  })
+    event.preventDefault();
+    navElement.classList.remove('show');
+    scrollSmooth(link);
+  });
 }
 
 /* SCROLL SMOOTH */
 function scrollSmooth(link) {
-  const sectionId = link.getAttribute('href')
+  const sectionId = link.getAttribute('href');
   document.querySelector(sectionId).scrollIntoView({
-    behavior: 'smooth'
-  })
+    behavior: 'smooth',
+  });
 }
 
 /* ANIMATE GSAP */
-gsap.from('.nav-logo', { opacity: 0, duration: 1.2, delay: 0.5, y: 25 })
-gsap.from('.nav-item, .nav-toggle, .nav-button', { opacity: 0, duration: 1.2, delay: 0.7, y: 25 })
-gsap.from('.description-title', { opacity: 0, duration: 1.5, delay: 0.8, y: 50 })
-gsap.from('.description-paragraph', { opacity: 0, duration: 1.5, delay: 1.1, y: 50 })
-gsap.from('.airpod1', { opacity: 0, duration: 2, delay: 1.2, y: -40 })
-gsap.from('.airpod2', { opacity: 0, duration: 2, delay: 1.4, y: 40 })
-gsap.from('.scroll-container', { opacity: 0, duration: 1.5, delay: 1.6, y: 30 })
+gsap.from('.nav-logo', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
+gsap.from('.nav-item, .nav-toggle, .nav-button', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
+gsap.from('.description-title', { opacity: 0, duration: 1, delay: 0.8, y: 50 });
+gsap.from('.description-paragraph', { opacity: 0, duration: 1, delay: 0.8, y: 50 });
+gsap.from('.headphones', { opacity: 0, duration: 2, delay: 1, y: -40 });
+gsap.from('.scroll-container', { opacity: 0, duration: 1, delay: 0.5, y: -25 });
+// gsap.from('.specification-title', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
+// // gsap.from('.details-box', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
+// gsap.from('.secondary-specifications-box', { opacity: 0, duration: 1, delay: 0.5, y: 25 });
 
 /* ANIMATE SCROLLMAGIC */
-const animate = new TimelineMax({ onUpdate: updatePercentage })
+const animate = new TimelineMax({ onUpdate: updatePercentage });
 
-animate.from('.details-img', { opacity: 0, y: 25 })
-animate.from('.details-box', { opacity: 0, y: 25, duration: 1, ease: 'expo.out', stagger: 0.4 })
+animate.from('.specification-title', {
+  opacity: 0,
+  y: 25,
+  duration: 0.8,
+  ease: 'expo.out',
+  stagger: 0.4,
+});
+animate.from('.details-box', { opacity: 0, y: 25, duration: 0.6, ease: 'expo.out', stagger: 0.2 });
+animate.from('.secondary-specifications-box', {
+  opacity: 0,
+  y: 25,
+  duration: 0.8,
+  ease: 'expo.out',
+  stagger: 0.4,
+});
 
-const controller = new ScrollMagic.Controller()
+const controller = new ScrollMagic.Controller();
 const scene = new ScrollMagic.Scene({
-  triggerElement: '.details-box'
+  triggerElement: '.specification-title, .details-box, .secondary-specifications-box',
 })
   .setTween(animate)
-  .addTo(controller)
+  .addTo(controller);
 
 function updatePercentage() {
-  animate.progress()
+  animate.progress();
 }
