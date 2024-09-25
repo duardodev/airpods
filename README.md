@@ -1,14 +1,15 @@
 <h1 align="center">
-  AirPods | Landing Page
+  Beats Headphones | Landing Page
 </h1>
 
 <h4 align="center">
-  AirPods Landing Page responsiva e animada com HTML, CSS e JavaScript.
+  Landing page responsiva e animada com HTML, CSS e JavaScript para os fones de ouvido da Beats.
 </h4>
 
-![Resultado final do projeto](assets/img/preview.png)
+![Preview do projeto](https://i.imgur.com/cbUN9sX.png)
 
-<h4 align="center"><a href="https://airpods.vercel.app">Clique para visitar o projeto</a></h4>
+
+<h4 align="center"><a href="https://beats-headphones.vercel.app">Clique para visitar o projeto</a></h4>
 
 ---
 
@@ -25,12 +26,6 @@ Bibliotecas
 - [Google Fonts](https://fonts.google.com)
 - [GSAP](https://greensock.com/gsap/)
 - [ScrollMagic](https://scrollmagic.io/)
-
----
-
-## 📝 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
 ---
 
